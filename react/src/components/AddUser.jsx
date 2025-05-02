@@ -2,7 +2,7 @@ import axios from "axios"
 import { useState } from "react"
 
 import { Link } from 'react-router-dom';
-
+import "./add.css"
 
 function AddUser() {
     const [name, setName] = useState(null)
@@ -42,7 +42,8 @@ function AddUser() {
                         <Link className="nav-link active" to="/adduser">Add User</Link>
                     </li>
                 </ul>
-            </div><br />
+            </div>
+            <div className="form-container">
             <div className="col">
                 <form onSubmit={($event) => addUser($event)}>
                     <div className="mb-4">
@@ -68,7 +69,7 @@ function AddUser() {
                     </div>
 
                     <button type="submit" className="btn btn-primary" value="user added ">Submit</button>
-                </form></div>
+                </form></div></div>
         </div>
 
 
